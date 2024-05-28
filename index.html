@@ -3,17 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LEVY</title>
+  <title>Animated Background</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
   <div class="background-container">
-    <div class="video-background">
-      <video autoplay loop muted>
-        <source src="background-video.mp4" type="video/mp4">
-      </video>
+    <div class="background-image">
+      <img src="img/background.jpg" alt="Background Image">
+      <div class="star-overlay"></div>
     </div>
     <div class="content-container">
       <div class="profile-picture-container">
@@ -22,24 +21,16 @@
         </div>
         <div class="profile-picture-frame"></div>
       </div>
-      <h1 class="title">LEVY</h1>
-      <p class="subtitle">Social Media</p>
+      <h1 class="title">Welcome to my page</h1>
+      <p class="subtitle">Explore my online presence</p>
       <div class="button-container">
         <a href="https://github.com/rizzcc" class="button" id="github-button">
           <i class="fab fa-github"></i>
           GitHub
         </a>
-        <a href="https://www.77.com" class="button" id="youtube-button">
-          <i class="fab fa-youtube"></i>
-          YouTube
-        </a>
-        <a href="https://www.88.com" class="button" id="tiktok-button">
-          <i class="fab fa-tiktok"></i>
-          TikTok
-        </a>
-        <a href="https://www.99.com" class="button" id="instagram-button">
-          <i class="fab fa-instagram"></i>
-          Instagram
+        <a href="https://l2vyrizz.github.io/scripts/" class="button" id="scripts-button">
+          <i class="fas fa-code"></i>
+          Scripts
         </a>
       </div>
       <div class="social-media-container">
@@ -54,7 +45,18 @@
         </a>
       </div>
     </div>
+    <div class="menu-button">
+      <i class="fas fa-ellipsis-v"></i>
+    </div>
+    <div class="menu-overlay">
+      <div class="menu-content">
+        <a href="https://l2vyrizz.github.io/home/" class="menu-item active">Home</a>
+        <a href="https://l2vyrizz.github.io/scripts/" class="menu-item">Scripts</a>
+        <a href="#" class="menu-item">About</a>
+        <a href="#" class="menu-item">Contact</a>
+      </div>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
-            </html>
+  </html>
