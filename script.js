@@ -1,26 +1,33 @@
 const githubButton = document.getElementById('github-button');
-const youtubeButton = document.getElementById('youtube-button');
-const tiktokButton = document.getElementById('tiktok-button');
-const instagramButton = document.getElementById('instagram-button');
+const scriptsButton = document.getElementById('scripts-button');
+const menuButton = document.querySelector('.menu-button');
+const menuOverlay = document.querySelector('.menu-overlay');
+const menuItems = document.querySelectorAll('.menu-item');
 
 githubButton.addEventListener('click', () => {
   window.location.href = 'https://github.com/rizzcc';
   playAnimation();
 });
 
-youtubeButton.addEventListener('click', () => {
-  window.location.href = 'https://www.77.com';
+scriptsButton.addEventListener('click', () => {
+  window.location.href = 'https://l2vyrizz.github.io/scripts/';
   playAnimation();
 });
 
-tiktokButton.addEventListener('click', () => {
-  window.location.href = 'https://www.88.com';
-  playAnimation();
+menuButton.addEventListener('click', () => {
+  menuOverlay.style.display = 'flex';
 });
 
-instagramButton.addEventListener('click', () => {
-  window.location.href = 'https://www.99.com';
-  playAnimation();
+menuOverlay.addEventListener('click', (event) => {
+  if (event.target === menuOverlay) {
+    menuOverlay.style.display = 'none';
+  }
+});
+
+menuItems.forEach((item) => {
+  item.addEventListener('click', () => {
+    menuOverlay.style.display = 'none';
+  });
 });
 
 function playAnimation() {
