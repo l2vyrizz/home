@@ -12,7 +12,7 @@ body {
   overflow: hidden;
 }
 
-.video-background {
+.background-image {
   position: absolute;
   top: 0;
   left: 0;
@@ -21,15 +21,22 @@ body {
   z-index: -1;
 }
 
-.video-background video {
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
+.background-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.star-overlay {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('stars.png');
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  animation: starScroll 60s linear infinite;
 }
 
 .content-container {
@@ -137,18 +144,8 @@ body {
   color: #fff;
 }
 
-#youtube-button:hover {
-  background-color: #ff0000;
-  color: #fff;
-}
-
-#tiktok-button:hover {
-  background-color: #69c9d0;
-  color: #fff;
-}
-
-#instagram-button:hover {
-  background-color: #e1306c;
+#scripts-button:hover {
+  background-color: #6c63ff;
   color: #fff;
 }
 
@@ -178,6 +175,65 @@ body {
 
 .social-media-link:hover {
   transform: translateY(-5px);
+}
+
+.menu-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+.menu-content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.menu-item {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  font-size: 24px;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.menu-item.active,
+.menu-item:hover {
+  color: #6c63ff;
+}
+
+@keyframes starScroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
 }
 
 @keyframes profilePictureAnimation {
